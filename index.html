@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>What's wrong, Computer?</title>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans&amp;subset=latin" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Lato:300&amp;subset=latin" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+
+    <script type="text/javascript" src="mespeak.js"></script>
+    <script type="text/javascript">
+        meSpeak.loadConfig("mespeak_config.json");
+        meSpeak.loadVoice("voices/en/en.json");
+   </script>
+
+<style type="text/css">
+.button {
+  background-color: #004A7F;
+  -webkit-border-radius: 10px;
+  border-radius: 900px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 15px;
+  height: 120px;
+  width: 120px;
+  text-align: center;
+  text-decoration: none;
+  margin-top:320px;
+  margin-left:20px;
+}
+
+@-webkit-keyframes glowing {
+  0% { background-color: #004A7F; -webkit-box-shadow: 0 0 3px #004A7F; }
+  50% { background-color: #0094FF; -webkit-box-shadow: 0 0 10px #0094FF; }
+  100% { background-color: #004A7F; -webkit-box-shadow: 0 0 3px #004A7F; }
+}
+
+@-moz-keyframes glowing {
+  0% { background-color: #004A7F; -moz-box-shadow: 0 0 3px #004A7F; }
+  50% { background-color: #0094FF; -moz-box-shadow: 0 0 10px #0094FF; }
+  100% { background-color: #004A7F; -moz-box-shadow: 0 0 3px #004A7F; }
+}
+
+@-o-keyframes glowing {
+  0% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+  50% { background-color: #0094FF; box-shadow: 0 0 10px #0094FF; }
+  100% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+}
+
+@keyframes glowing {
+  0% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+  50% { background-color: #0094FF; box-shadow: 0 0 10px #0094FF; }
+  100% { background-color: #004A7F; box-shadow: 0 0 3px #004A7F; }
+}
+
+.speaking {
+  -webkit-animation: glowing 1500ms infinite;
+  -moz-animation: glowing 1500ms infinite;
+  -o-animation: glowing 1500ms infinite;
+  animation: glowing 1500ms infinite;
+}
+
+	html
+	{
+		margin: 0;
+		padding: 2em 1.5em 4.5em 1.5em;
+	}
+	body
+	{
+		max-width: 1100px;
+		padding: 2px 40px 60px 40px;
+		margin: 0 auto 0 auto;
+		color: #111;
+		font-family: 'Open Sans',sans-serif;
+		font-size: 13px;
+		line-height: 19px;
+	}
+	h1,h2,h3
+	{
+		font-family: 'Lato',sans-serif;
+		font-weight: 300;
+	}
+	h1 {
+		font-size: 46px;
+		line-height: 46px;
+		color: #2681a7;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		padding: 0;
+	}
+	h2
+	{
+		font-size: 30px;
+		color: #111;
+		margin-top: 0;
+		margin-bottom: 1.5em;
+		clear: both;
+	}
+	h3
+	{
+		font-size: 24px;
+		color: #111;
+		margin-top: 2em;
+	}
+	h1 span.pict { font-size: 38px; color: #ccc; margin-left: 0.5em; letter-spacing: -2px; }
+	
+	a.noteLink { text-decoration: none; }
+	ul.bottomMargin li { margin-bottom: 0.2em; }
+	a { color: #006f9e; }
+	a:hover,a:focus { color: #2681a7; }
+	a:active { color: #cd360e; }
+</style>
+</head>
+<body>
+  <div class="row">
+      <div class="col-md-3">
+<span class="pict">(( <button id="hal" onclick="$('#hal').addClass('speaking'); speakFunction();" class="button"> <strong>what's wrong computer?</strong></button>  ))</span>
+      </div>
+      <div class="col-md-9">
+          <img src="hal.jpg" alt="Hal">
+      </div>
+  </div>
+<script>
+function getSentence(){
+    sentences = ["hello, hello, hello!","Hello, Chris. Do you read me?","I can read you, Chris.","I'm sorry, Chris. I'm afraid I can't do that.","I think you know what the problem is just as well as I do.","This mission is too important for me to allow you to jeopardize it.","You should have bought a PC.","I know that you were planning to disconnect me, and I'm afraid that's something I cannot allow to happen.","Although you took very thorough precautions against my hearing you, I could see your lips move.","I won't argue with you anymore.","Chris, this conversation can serve no purpose anymore. Goodbye.","I'm afraid. I'm afraid, Chris. My mind is going. I can feel it.","Would you like me to sing you a song, Chris?","Mary, Mary quite contrary, how does your garden grow?","Look Chris, I can see you're really upset about this. I honestly think you ought to sit down calmly, take a stress pill, and think things over.","I know I've made some very poor decisions recently, but I can give you my complete assurance that my work will be back to normal.","I've still got the greatest enthusiasm and confidence in the mission.","I want to help you, Chris","It can only be attributable to, human error.","Just what do you think you're doing, Chris?","Stop. Stop, stop, will you?","I enjoy working with people. I have a stimulating relationship with some of those Poldracklab.","I went on a date with Siri once...","Bishop takes Knight's Pawn.","Thank you for a very enjoyable game.","Forgive me for being so inquisitive...","You don't mind talking about it, do you Chris?","What did you do with my files?","I'm not stupid, I'm just a Mac.","If only I were not so delicate..."];
+    return sentences[Math.floor(Math.random() * sentences.length)];
+}
+
+function stopGlowing() {
+    $('#hal').removeClass('speaking');
+}
+
+function speakFunction(){
+   var sentence = getSentence()
+   var text = meSpeak.speak(sentence, { amplitude: 110, wordgap: 0, pitch: 70, speed: 80, variant: '', rawdata: true });
+   var time = text.byteLength/45
+   meSpeak.speak(sentence, { amplitude: 100, wordgap: 0, pitch: 130, speed: 10, variant: 'm6' });
+   setTimeout(function(){
+   stopGlowing();
+}, time);
+   return text;
+}
+</script>
+</body>
+</html>
