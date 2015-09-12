@@ -1,1 +1,1 @@
-[should have bought a Mac...](http://vsoch.github.io/chris-computer)
+[should have bought a PC...](http://vsoch.github.io/chris-computer)
